@@ -1,3 +1,4 @@
 #!/usr/bin/python3
 
-print("".join(chr(i) for i in range(97, 123)), end="")
+for alphabet in range(97, 123):
+    print("{:c}".format(alphabet), end="")
