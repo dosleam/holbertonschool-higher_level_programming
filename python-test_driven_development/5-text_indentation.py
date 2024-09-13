@@ -1,23 +1,28 @@
 #!/usr/bin/python3
 
-"""Create function print square"""
+"""
+contain the function
+"""
 
 
 def text_indentation(text):
 
-    """Prints text with 2 new lines after
-    each of these characters: ., ? and :
-    Args:
-        text (str): The string to print
-    Raises:
-        TypeError: If text is not a string
     """
+    function for add indentation
+    text: contain the string
+    """
+
     if not isinstance(text, str):
         raise TypeError("text must be a string")
 
-    string = ""
-    for cpt in text:
-        string += cpt
-        if cpt in ['.', '?', ':']:
-            string += "\n\n"
-    print(string, end="")
+    spec = {".", "?", ":"}
+    start = 0
+    for i in range(len(text)):
+        if text[i] in spec:
+            new_text = text[start:i + 1] + "\n\n"
+            start = i + 1
+            stripped = new_text.strip(" ")
+            print("{}".format(stripped), end="")
+    if start < len(text):
+        result = text[start:].strip()
+        print("{}".format(result), end="")

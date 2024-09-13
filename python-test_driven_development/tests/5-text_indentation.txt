@@ -1,23 +1,49 @@
->>> print_square = __import__('4-print_square').print_square
+>>> text_indentation = __import__('5-text_indentation').text_indentation
 
->>> print_square(5)
-#####
-#####
-#####
-#####
-#####
+>>> text_indentation("                     ")
 
->>> print_square("5")
+>>> text_indentation(5)
 Traceback (most recent call last):
 ...
-TypeError: size must be an integer
+TypeError: text must be a string
 
->>> print_square(-1)
+>>> text_indentation(None)
 Traceback (most recent call last):
 ...
-ValueError: size must be >= 0
+TypeError: text must be a string
 
->>> print_square()
+>>> text_indentation(".")
+.
+<BLANKLINE>
+
+>>> text_indentation({})
 Traceback (most recent call last):
 ...
-TypeError: print_square() missing 1 required positional argument: 'size'
+TypeError: text must be a string
+
+>>> text_indentation("START       ?    ")
+START       ?
+<BLANKLINE>
+
+>>> text_indentation("     MIDDLE     :")
+MIDDLE     :
+<BLANKLINE>
+
+>>> text_indentation("             END.")
+END.
+<BLANKLINE>
+
+>>> text_indentation(".?:")
+.
+<BLANKLINE>
+?
+<BLANKLINE>
+:
+<BLANKLINE>
+
+>>> text_indentation("      aaaaa   ")
+aaaaa
+
+>>> text_indentation("      aaaaa   ?")
+aaaaa   ?
+<BLANKLINE>
