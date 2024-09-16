@@ -6,13 +6,13 @@ Creates a class Square
 
 
 class Square:
-    
+
     """
     defines a class Square
 
     Args:
         size (int): the size of the new square
-    
+
     """
     def __init__(self, size=0):
         self.__size = size
@@ -20,7 +20,7 @@ class Square:
     @property
     def size(self):
         return self.__size
-    
+
     @size.setter
     def size(self, size):
         if not isinstance(size, int):
