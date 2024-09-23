@@ -7,10 +7,11 @@ otherwise False"""
 
 def is_same_class(obj, a_class):
     """Check if an object is exactly an instance
+    
     Args:
         obj: object
         a_class: class
-    return:
+    Returns:
         True if object is exactly an instance of a a_class
         False if object is not an instance of a a_class
     """
