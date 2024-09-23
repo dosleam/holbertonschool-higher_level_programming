@@ -13,7 +13,6 @@ class Square(Rectangle):
     Contain the code
     """
 
-
     def __init__(self, size):
         """
         Initialize a new square.
