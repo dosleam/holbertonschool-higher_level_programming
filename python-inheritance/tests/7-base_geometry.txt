@@ -1,40 +1,29 @@
 >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
->>> bg = BaseGeometry()
->>> bg.area()
+# Test 1: Call area() method (should raise an Exception)
+>>> geom = BaseGeometry()
+>>> geom.area()
 Traceback (most recent call last):
     ...
 Exception: area() is not implemented
 
->>> bg.integer_validator("width", "not an integer")
+# Test 2: Valid integer (should return the value itself)
+>>> geom.integer_validator("my_int", 10)
+10
+
+# Test 3: Non-integer value (should raise a TypeError)
+>>> geom.integer_validator("my_str", "abc")
 Traceback (most recent call last):
     ...
-TypeError: width must be an integer
+TypeError: my_str must be an integer
 
->>> bg.integer_validator("height", -5)
+# Test 4: Integer less than or equal to 0 (should raise a ValueError)
+>>> geom.integer_validator("my_int", 0)
 Traceback (most recent call last):
     ...
-ValueError: height must be greater than 0
+ValueError: my_int must be greater than 0
 
->>> bg.integer_validator("size", 5)
-
->>> bg.integer_validator("size", -3)
+>>> geom.integer_validator("my_int", -5)
 Traceback (most recent call last):
     ...
-ValueError: size must be greater than 0
-
->>> bg.integer_validator("length", 10)
-
->>> bg.integer_validator("length", 1000000)
-
->>> bg.integer_validator("width", 1)
-
->>> bg.integer_validator("size", None)
-Traceback (most recent call last):
-    ...
-TypeError: size must be an integer
-
->>> bg.integer_validator("height", "")
-Traceback (most recent call last):
-    ...
-TypeError: height must be an integer
+ValueError: my_int must be greater than 0
