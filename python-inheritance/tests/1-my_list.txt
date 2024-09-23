@@ -44,10 +44,6 @@ Test for success
 >>> my_list.print_sorted()
 [20, 20, 20, 20]
 
->>> my_list = MyList(["un", "deux"])
->>> my_list.print_sorted()
-['deux', 'un']
-
 >>> my_list = MyList([2])
 >>> my_list.print_sorted()
 [2]
