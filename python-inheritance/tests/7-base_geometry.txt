@@ -28,3 +28,13 @@ ValueError: size must be greater than 0
 >>> bg.integer_validator("length", 1000000)
 
 >>> bg.integer_validator("width", 1)
+
+>>> bg.integer_validator("size", None)
+Traceback (most recent call last):
+    ...
+TypeError: size must be an integer
+
+>>> bg.integer_validator("height", "")
+Traceback (most recent call last):
+    ...
+TypeError: height must be an integer
