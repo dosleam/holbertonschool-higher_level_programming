@@ -7,7 +7,6 @@ otherwise False"""
 
 def is_same_class(obj, a_class):
     """Check if an object is exactly an instance
-    
     Args:
         obj: object
         a_class: class
