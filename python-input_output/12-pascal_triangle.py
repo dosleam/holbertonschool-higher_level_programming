@@ -20,7 +20,7 @@ def pascal_triangle(n):
         if x > 1:
             for y in range (1, x):
                 list_added[y] = g_list[x - 1][y - 1] + g_list[x - 1][y]
-            g_list.append(list_added)
+        g_list.append(list_added)
 
-        return g_list
+    return g_list
 
