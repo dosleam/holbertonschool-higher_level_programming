@@ -6,7 +6,7 @@ Create a class
 
 
 class Student:
-    
+
     """
     Contain the code
     """
