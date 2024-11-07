@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <title>Liste des Articles</title>
+</head>
+<body>
+    <h1>Liste des Articles</h1>
+
+    {% if items %}
+        <ul>
+            {% for item in items %}
+                <li>{{ item }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>Aucun article trouvé.</p>
+    {% endif %}
+</body>
+</html>
