@@ -1,7 +1,7 @@
 <!doctype html>
-<html lang="fr">
+<html lang="en">
 <head>
-    <title>Liste des Produits</title>
+    <title>Items List</title>
     <style>
         table {
             width: 50%;
@@ -18,7 +18,7 @@
     </style>
 </head>
 <body>
-    <h1>Liste des Produits</h1>
+    <h1>Product List</h1>
 
     {% if message %}
         <p>{{ message }}</p>
@@ -26,9 +26,9 @@
         <table>
             <thead>
                 <tr>
-                    <th>Nom</th>
-                    <th>Catégorie</th>
-                    <th>Prix</th>
+                    <th>Name</th>
+                    <th>Category</th>
+                    <th>Price</th>
                 </tr>
             </thead>
             <tbody>
@@ -36,13 +36,13 @@
                     <tr>
                         <td>{{ item.name }}</td>
                         <td>{{ item.category }}</td>
-                        <td>{{ item.price }} €</td>
+                        <td>{{ item.price }}</td>
                     </tr>
                 {% endfor %}
             </tbody>
         </table>
     {% else %}
-        <p>Aucun produit trouvé.</p>
+        <p>No items found.</p>
     {% endif %}
 </body>
 </html>
