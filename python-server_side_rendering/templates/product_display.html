@@ -1,31 +1,48 @@
 <!doctype html>
-<html lang="en">
+<html lang="fr">
 <head>
-    <title>Items List</title>
+    <title>Liste des Produits</title>
+    <style>
+        table {
+            width: 50%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
 </head>
 <body>
-    <h1>Product List</h1>
+    <h1>Liste des Produits</h1>
+
     {% if message %}
         <p>{{ message }}</p>
-    {% else %}
+    {% elif items %}
         <table>
             <thead>
                 <tr>
-                    <th>Name</th>
-                    <th>Category</th>
-                    <th>Price</th>
+                    <th>Nom</th>
+                    <th>Catégorie</th>
+                    <th>Prix</th>
                 </tr>
             </thead>
             <tbody>
-                {% for product in products %}
+                {% for item in items %}
                     <tr>
-                        <td>{{ product.name }}</td>
-                        <td>{{ product.category }}</td>
-                        <td>{{ product.price }}</td>
+                        <td>{{ item.name }}</td>
+                        <td>{{ item.category }}</td>
+                        <td>{{ item.price }} €</td>
                     </tr>
                 {% endfor %}
             </tbody>
         </table>
+    {% else %}
+        <p>Aucun produit trouvé.</p>
     {% endif %}
 </body>
 </html>
