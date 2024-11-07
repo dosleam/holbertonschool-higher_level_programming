@@ -1,11 +1,9 @@
 <!doctype html>
-<html lang="fr">
+<html lang="en">
 <head>
-    <title>Liste des Articles</title>
+    <title>Items List</title>
 </head>
 <body>
-    <h1>Liste des Articles</h1>
-
     {% if items %}
         <ul>
             {% for item in items %}
@@ -13,7 +11,7 @@
             {% endfor %}
         </ul>
     {% else %}
-        <p>Aucun article trouvé.</p>
+        <p>No items found</p>
     {% endif %}
 </body>
 </html>
