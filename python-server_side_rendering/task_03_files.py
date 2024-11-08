@@ -34,7 +34,9 @@ def items():
 
 @app.route('/products', methods=['GET'])
 def display_products():
+
     source = request.args.get('source', '')
+
     product_id = request.args.get('id', None)
     message = None
     products = []
